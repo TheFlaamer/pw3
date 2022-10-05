@@ -28,9 +28,12 @@
                     "nome"=> $result['nomeusuario'],
                     "email"=>$result['email']
                 ];
-                print_r($payload);
+                // print_r($payload);
                 $jwt = new MyJWT();
-                $token = $jwt->criaToken($payload);
+                $token = $jwt->criaToken($payload, "token");
+
+                //validação do token
+                $jwt = $jwt->validaToken($token);
             } else {
                 echo "usuário ou senha incorretos";
             }
