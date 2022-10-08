@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="./receive-form.php" method="POST">
+        <h1>Logar</h1>
         <div class="form-wraper">
             <label for="usuario">Usuário</label>
             <input type="text" name="user" id="usuario">
@@ -15,6 +16,15 @@
         <div class="form-wraper">
             <label for="password">Senha</label>
             <input type="text" name="password" id="password">
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <form action="./requisicao.php" method="POST">
+        <h1>Validar Token</h1>
+        <div class="form-wraper">
+            <label for="token">Token</label>
+            <input type="text" name="token" id="token" placeholder="Insira o token para validar o token">
         </div>
         <input type="submit" value="Enviar">
     </form>
